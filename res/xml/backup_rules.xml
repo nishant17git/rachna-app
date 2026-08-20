@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include WebView local storage, databases, and preferences -->
+    <include domain="root" path="app_webview/Local Storage" />
+    <include domain="root" path="app_webview/IndexedDB" />
+    <include domain="database" path="." />
+    <include domain="sharedpref" path="." />
+
+    <!-- Exclude heavy web caches, image caches, and temporary files -->
+    <exclude domain="root" path="app_webview/Cache" />
+    <exclude domain="root" path="app_webview/Default/Cache" />
+    <exclude domain="root" path="app_webview/Default/Code Cache" />
+    <exclude domain="root" path="app_webview/Default/Service Worker/CacheStorage" />
+</full-backup-content>

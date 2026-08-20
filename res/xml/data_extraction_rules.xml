@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Include essential activity state and local storage -->
+        <include domain="root" path="app_webview/Local Storage" />
+        <include domain="root" path="app_webview/IndexedDB" />
+        <include domain="database" path="." />
+        <include domain="sharedpref" path="." />
+
+        <!-- Exclude image caches and network downloads -->
+        <exclude domain="root" path="app_webview/Cache" />
+        <exclude domain="root" path="app_webview/Default/Cache" />
+        <exclude domain="root" path="app_webview/Default/Code Cache" />
+        <exclude domain="root" path="app_webview/Default/Service Worker/CacheStorage" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="root" path="app_webview/Local Storage" />
+        <include domain="root" path="app_webview/IndexedDB" />
+        <include domain="database" path="." />
+        <include domain="sharedpref" path="." />
+    </device-transfer>
+</data-extraction-rules>
