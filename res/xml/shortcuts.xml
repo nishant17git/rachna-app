@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="explore"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_explore_short"
+        android:shortcutLongLabel="@string/shortcut_explore_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.rachna.app"
+            android:targetClass="com.rachna.app.MainActivity"
+            android:data="https://rachnabymolecules.vercel.app/explore" />
+    </shortcut>
+</shortcuts>

@@ -11,32 +11,48 @@
     <allow-navigation href="https://*.vercel.app*" />
     <allow-navigation href="https://*.supabase.co*" />
 
-    <!-- Prevent Connection Timeout -->
+    <!-- Performance, Persistence & Device Identity -->
     <preference name="loadUrlTimeoutValue" value="70000" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="AppendUserAgent" value="RachnaNativeApp/1.0 (Android)" />
+    <preference name="AllowBackForwardNavigationGestures" value="true" />
+    <preference name="EnableViewportScale" value="false" />
 
     <platform name="android">
-        <!-- Force GPU Hardware Acceleration -->
+        <!-- Native UI Physics & GPU Acceleration -->
         <preference name="android-hardwareAccelerated" value="true" />
-
-        <!-- Enable Android Native Edge Stretch Physics -->
         <preference name="DisallowOverscroll" value="false" />
-        <preference name="ScrollEnabled" value="true" />
+        <preference name="FontSize" value="100%" />
+        <preference name="AndroidXSoftInputMode" value="adjustResize" />
+        <preference name="MixedContentMode" value="0" />
 
-        <!-- Status Bar Styling -->
+        <!-- Status Bar Configuration -->
         <preference name="StatusBarOverlaysWebView" value="false" />
         <preference name="StatusBarBackgroundColor" value="#11100C" />
         <preference name="StatusBarStyle" value="lightcontent" />
 
-        <!-- Splash Screen & Icon -->
+        <!-- Navigation Bar Styling -->
+        <preference name="NavigationBarBackgroundColor" value="#11100C" />
+        <preference name="NavigationBarLight" value="false" />
+
+        <!-- Splash Screen Transition & Styling -->
         <icon src="res/icon.png" />
         <splash src="res/splash.png" />
         <preference name="SplashScreenDelay" value="2000" />
         <preference name="AutoHideSplashScreen" value="true" />
+        <preference name="FadeSplashScreen" value="true" />
+        <preference name="FadeSplashScreenDuration" value="350" />
         <preference name="AndroidWindowSplashScreenBackground" value="#11100C" />
         <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
 
-        <!-- Android App Links / Deep Linking -->
+        <!-- Copy Shortcut Resources to Android Build -->
+        <resource-file src="res/values/shortcuts_strings.xml" target="app/src/main/res/values/shortcuts_strings.xml" />
+        <resource-file src="res/xml/shortcuts.xml" target="app/src/main/res/xml/shortcuts.xml" />
+
+        <!-- Android App Links & Shortcuts Metadata -->
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -46,4 +62,3 @@
         </config-file>
     </platform>
 </widget>
-
