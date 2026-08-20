@@ -18,8 +18,9 @@
         <!-- Force GPU Hardware Acceleration -->
         <preference name="android-hardwareAccelerated" value="true" />
 
-        <!-- Disable browser bounce and edge glow -->
-        <preference name="DisallowOverscroll" value="true" />
+        <!-- Enable Android Native Edge Stretch Physics -->
+        <preference name="DisallowOverscroll" value="false" />
+        <preference name="ScrollEnabled" value="true" />
 
         <!-- Status Bar Styling -->
         <preference name="StatusBarOverlaysWebView" value="false" />
