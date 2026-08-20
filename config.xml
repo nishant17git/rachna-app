@@ -10,8 +10,13 @@
     <content src="https://rachnabymolecules.vercel.app" />
 <allow-navigation href="https://rachnabymolecules.vercel.app/*" />
 <allow-navigation href="https://*.supabase.co/*" />
-    <platform name="android">
+            <platform name="android">
         <icon src="res/icon.png" />
+        <splash src="res/splash.png" />
+        <preference name="SplashScreenDelay" value="2500" />
+        <preference name="AutoHideSplashScreen" value="true" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#11100C" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/icon.png" />
     </platform>
 
 </widget>
