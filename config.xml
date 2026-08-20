@@ -9,30 +9,19 @@
     <access origin="*" />
     <allow-navigation href="https://rachnabymolecules.vercel.app*" />
     <allow-navigation href="https://*.vercel.app*" />
-    <platform name="android">
-        <!-- Status Bar Configuration -->
-        <preference name="StatusBarOverlaysWebView" value="false" />
-        <preference name="StatusBarBackgroundColor" value="#11100C" />
-        <preference name="StatusBarStyle" value="lightcontent" />
-
-        <!-- Splash Screen & Icon -->
-        <icon src="res/icon.png" />
-        <splash src="res/splash.png" />
-        <preference name="SplashScreenDelay" value="2000" />
-        <preference name="AutoHideSplashScreen" value="true" />
-        <preference name="AndroidWindowSplashScreenBackground" value="#11100C" />
-        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
-    </platform>
     <allow-navigation href="https://*.supabase.co*" />
 
     <!-- Prevent Connection Timeout -->
     <preference name="loadUrlTimeoutValue" value="70000" />
 
     <platform name="android">
+        <!-- Force GPU Hardware Acceleration -->
+        <preference name="android-hardwareAccelerated" value="true" />
+
         <!-- Disable browser bounce and edge glow -->
         <preference name="DisallowOverscroll" value="true" />
 
-        <!-- Status & Navigation Bar Styling -->
+        <!-- Status Bar Styling -->
         <preference name="StatusBarOverlaysWebView" value="false" />
         <preference name="StatusBarBackgroundColor" value="#11100C" />
         <preference name="StatusBarStyle" value="lightcontent" />
@@ -44,7 +33,16 @@
         <preference name="AutoHideSplashScreen" value="true" />
         <preference name="AndroidWindowSplashScreenBackground" value="#11100C" />
         <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
+
+        <!-- Android App Links / Deep Linking -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="rachnabymolecules.vercel.app" />
+            </intent-filter>
+        </config-file>
     </platform>
-
-
 </widget>
+
