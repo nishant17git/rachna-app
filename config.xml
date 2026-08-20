@@ -50,15 +50,16 @@
         <resource-file src="res/values/shortcuts_strings.xml" target="app/src/main/res/values/shortcuts_strings.xml" />
         <resource-file src="res/xml/shortcuts.xml" target="app/src/main/res/xml/shortcuts.xml" />
 
-        <!-- Android App Links & Shortcuts Metadata -->
+            <!-- Android App Links & Shortcuts Metadata -->
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https" android:host="rachnabymolecules.vercel.app" />
+                <data android:scheme="https" android:host="rachnabymolecules.vercel.app" android:pathPrefix="/" />
             </intent-filter>
         </config-file>
+
     </platform>
 </widget>
