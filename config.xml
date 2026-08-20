@@ -10,4 +10,8 @@
     <content src="https://rachnabymolecules.vercel.app" />
 <allow-navigation href="https://rachnabymolecules.vercel.app/*" />
 <allow-navigation href="https://*.supabase.co/*" />
+    <platform name="android">
+        <icon src="res/icon.png" />
+    </platform>
+
 </widget>
