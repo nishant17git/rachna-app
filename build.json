@@ -1,0 +1,11 @@
+{
+  "android": {
+    "debug": {
+      "keystore": "rachna.keystore",
+      "storePassword": "rachna123",
+      "alias": "rachna",
+      "password": "rachna123",
+      "keystoreType": ""
+    }
+  }
+}
