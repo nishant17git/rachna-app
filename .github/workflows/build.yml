@@ -1,9 +1,4 @@
-
-
-
-
-
-hhuname: Build Rachna APK
+name: Build Rachna APK
 
 on: [push]
 
