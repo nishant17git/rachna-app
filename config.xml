@@ -3,11 +3,12 @@
     <name>Rachna</name>
     <description>Rachna Application</description>
     <author email="nishant17github@gmail.com">Nishant</author>
-    <content src="https://rachnabymolecules.vercel.app" />
+    <content src="https://rachna.eu.cc" />
     
     <!-- Network & Navigation Permissions -->
     <access origin="*" />
-    <allow-navigation href="https://rachnabymolecules.vercel.app*" />
+    <allow-navigation href="https://rachna.eu.cc*" />
+    <allow-navigation href="https://*.rachna.eu.cc*" />
     <allow-navigation href="https://*.vercel.app*" />
     <allow-navigation href="https://*.supabase.co*" />
 
@@ -50,14 +51,14 @@
         <resource-file src="res/values/shortcuts_strings.xml" target="app/src/main/res/values/shortcuts_strings.xml" />
         <resource-file src="res/xml/shortcuts.xml" target="app/src/main/res/xml/shortcuts.xml" />
 
-            <!-- Android App Links & Shortcuts Metadata -->
+        <!-- Android App Links & Shortcuts Metadata -->
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https" android:host="rachnabymolecules.vercel.app" android:pathPrefix="/" />
+                <data android:scheme="https" android:host="rachna.eu.cc" android:pathPrefix="/" />
             </intent-filter>
         </config-file>
 
